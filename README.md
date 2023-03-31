@@ -1,6 +1,6 @@
-[![wakatime](https://wakatime.com/badge/user/3bd24664-869f-460a-94e1-b98da8136504/project/84b221e2-7b66-4ea3-b381-f11d8513afe0.svg)](https://wakatime.com/badge/user/3bd24664-869f-460a-94e1-b98da8136504/project/84b221e2-7b66-4ea3-b381-f11d8513afe0)  
+[![wakatime](https://wakatime.com/badge/user/3bd24664-869f-460a-94e1-b98da8136504/project/84b221e2-7b66-4ea3-b381-f11d8513afe0.svg)](https://wakatime.com/badge/user/3bd24664-869f-460a-94e1-b98da8136504/project/84b221e2-7b66-4ea3-b381-f11d8513afe0)
 
-<h2 align="center"> API FastAPI - Faculdade 🏫 </h2> 
+<h2 align="center">FastAPI - CRUD Faculdade 🏫 </h2>
 
 ## Índice
 
@@ -13,6 +13,8 @@
 - [Autor](#-autor)
 
 ## 📖 Sobre
+
+Esta API é um exemplo de como usar a modelagem e estruturação para futuras aplicações.
 
 O projeto **API FastAPI** é uma API desenvolvida em Python com o framework FastAPI, que tem como objetivo realizar o
 CRUD de um banco de dados dos cursos da faculdade.
@@ -57,7 +59,7 @@ Com tudo em mãos e devidamente instalado, você poderá seguir o próximo tópi
 
 Atente-se aos passos a seguir para executar o projeto:
 
-#### 📁 Clonar o repositório 
+#### 📁 Clonar o repositório
 
 ```bash
 # Clonar o repositório
@@ -67,13 +69,14 @@ git clone https://github.com/matheus-feu/FastAPI-JWT-Security.git
 cd FastAPI-JWT-Security
 ```
 
-#### 🐳 Docker 
+#### 🐳 Docker
+
 ```bash
 # Criar o container do banco de dados
 docker-compose up -d
 ```
 
-#### 🐍 Python 
+#### 🐍 Python
 
 ```bash
 # Criar um ambiente virtual
@@ -94,7 +97,90 @@ uvicorn main:app --reload
 
 ## 📌 Endpoints
 
-Em construção...
+Após concluir as etapas anteriores, você poderá acessar a documentação da API no endereço http://localhost:8000/docs.
+
+![documentacao](https://imgur.com/E3MTlQH.png)
+
+Basicamente a API possui 4 endpoints, neles você poderá realizar o CRUD de um curso da faculdade.
+
+O fluxo de autenticação é o seguinte:
+
+- Você precisa criar um curso na rota **/api/v1/cursos**, passando o título do curso, descrição, quantidade aulas e
+  horas.
+
+```bash
+{
+    "titulo": "Curso de Python",
+    "descricao": "Curso de Python",
+    "aulas": 10,
+    "horas": 10
+}
+```
+
+- Após criar o curso, na rota **/api/v1/cursos/{id}**, você poderá visualizar o curso criado pelo respectivo ID.
+
+```bash
+{
+  "id": 1
+}
+```
+
+Saída:
+
+```bash
+{
+    "id": 1,
+    "titulo": "Curso de Python",
+    "descricao": "Curso de Python",
+    "aulas": 10,
+    "horas": 10
+}
+```
+
+- Assim da mesma forma poderá pegar todos os cursos cadastrados na rota **/api/v1/cursos**.
+
+Saída:
+
+```bash
+[
+    {
+        "id": 1,
+        "titulo": "Curso de Python",
+        "descricao": "Curso de Python",
+        "aulas": 10,
+        "horas": 10
+    },
+    
+    {
+        "id": 2,
+        "titulo": "curso de Java",
+        "descricao": "Curso sobre java",
+        "aulas": 5,
+        "horas": 10
+    }        
+]
+```
+
+- Permite que possa atualizar o curso na rota **/api/v1/cursos/{id}**, passando o título do curso, descrição, quantidade
+  aulas e horas.
+
+```bash
+{
+    "titulo": "Curso de Python",
+    "descricao": "Curso sobre orientação a objetos",
+    "aulas": 30,
+    "horas": 65
+}
+```
+
+- Por fim, permite que possa deletar o curso na rota **/api/v1/cursos/{id}**, passando o respectivo ID do curso,
+  para saber qual o curso deseja deletar, vá na rota **/api/v1/cursos** e pegue o ID do curso que deseja deletar.
+
+```bash
+{
+  "id": 1
+}
+```
 
 ## 📚 Bibliotecas
 
@@ -102,7 +188,8 @@ Em construção...
 - [SQLAlchemy](https://www.sqlalchemy.org/)
 - [Pydantic](https://pydantic-docs.helpmanual.io/)
 - [Uvicorn](https://www.uvicorn.org/)
-- [Pyscopg2](https://pypi.org/project/psycopg2/)
+- [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+- [asyncpg](https://pypi.org/project/asyncpg/)
 
 ## 👨‍💻 Autor
 
