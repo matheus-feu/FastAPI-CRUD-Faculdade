@@ -1,0 +1,32 @@
+### POST Cursos
+POST http://localhost:8000/api/v1/cursos
+Content-Type: application/json
+
+{
+  "titulo": "Curso de PHP",
+  "descricao": "Curso sobre programação orientada a objetos com PHP",
+  "aulas": 15,
+  "horas": 30
+}
+
+### GET Cursos
+GET http://localhost:8000/api/v1/cursos
+
+### GET Curso By ID
+GET http://localhost:8000/api/v1/cursos/1
+
+### PUT Curso By ID
+PUT http://localhost:8000/api/v1/cursos/4
+Content-Type: application/json
+
+{
+  "titulo": "Curso de Python",
+  "descricao": "Curso sobre programação orientada a objetos com Python",
+  "aulas": 20,
+  "horas": 40
+}
+
+### DELETE Curso By ID
+DELETE http://localhost:8000/api/v1/cursos/1
+
+
