@@ -1,1 +1,1 @@
-from app.models.course import CourseModel # noqa: F401
+from app.models.course import CourseModel  # noqa: F401
