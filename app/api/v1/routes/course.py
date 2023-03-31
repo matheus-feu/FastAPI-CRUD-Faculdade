@@ -1,13 +1,12 @@
 from typing import List
 
 from fastapi import status, Depends, APIRouter, HTTPException
-from fastapi.openapi.models import Response
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from core.db.deps import get_session
-from core.models.course import CourseModel
-from core.schemas.courseschema import CourseSchema
+from app.core.deps import get_session
+from app.models.course import CourseModel
+from app.schemas.course import CourseSchema
 
 router = APIRouter()
 

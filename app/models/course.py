@@ -2,7 +2,7 @@ import datetime
 
 from sqlalchemy import Column, Integer, String, DateTime
 
-from core.db.base_model import Base
+from app.db.base_model import Base
 
 
 class CourseModel(Base):
@@ -15,5 +15,6 @@ class CourseModel(Base):
     descricao: str = Column(String(255))
     aulas: int = Column(Integer)
     horas: int = Column(Integer)
+
     data_criacao = Column(DateTime, default=datetime.datetime.utcnow())
     data_alteracao = Column(DateTime, default=datetime.datetime.utcnow(), onupdate=datetime.datetime.utcnow())

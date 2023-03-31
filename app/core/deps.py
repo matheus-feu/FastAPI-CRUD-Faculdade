@@ -3,7 +3,7 @@ from typing import Generator
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from core.db.database import SessionLocal
+from app.db.database import SessionLocal
 
 logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO)
 
@@ -20,3 +20,4 @@ async def get_session() -> Generator:
         yield session
     finally:
         await session.close()
+
