@@ -55,7 +55,9 @@ Com tudo em mãos e devidamente instalado, você poderá seguir o próximo tópi
 
 ## 🎯 Como baixar o projeto
 
-#### 📁 Clonar o repositório
+Atente-se aos passos a seguir para executar o projeto:
+
+#### 📁 Clonar o repositório 
 
 ```bash
 # Clonar o repositório
@@ -65,14 +67,13 @@ git clone https://github.com/matheus-feu/FastAPI-JWT-Security.git
 cd FastAPI-JWT-Security
 ```
 
-#### 🐳 Docker
-
+#### 🐳 Docker 
 ```bash
 # Criar o container do banco de dados
 docker-compose up -d
 ```
 
-#### 🐍 Python
+#### 🐍 Python 
 
 ```bash
 # Criar um ambiente virtual
@@ -83,6 +84,9 @@ venv\Scripts\activate
 
 # Instalar as dependências
 pip install -r requirements.txt
+
+# Criar as tabelas no banco de dados
+python create_tables.py
 
 # Executar o projeto
 uvicorn main:app --reload
