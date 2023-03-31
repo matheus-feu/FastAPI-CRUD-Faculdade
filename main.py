@@ -2,7 +2,7 @@ import logging
 
 from fastapi import FastAPI
 
-from api.v1.api import api_router
+from app.api.v1.api import api_router
 from config.settings import settings
 
 logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO)
