@@ -16,10 +16,10 @@
 
 Esta API é um exemplo de como usar a modelagem e estruturação para futuras aplicações.
 
-O projeto **API FastAPI** é uma API desenvolvida em Python com o framework FastAPI, que tem como objetivo realizar o
+O projeto **API FastAPI** é uma API desenvolvida em Python com o ‘framework’ FastAPI, cujo objetivo é realizar o
 CRUD de um banco de dados dos cursos da faculdade.
 
-A API está utilizando o banco de dados PostgreSQL configurado no Docker, e o ORM utilizado foi o SQLAlchemy.
+A API utiliza o banco de dados PostgreSQL configurado no Docker, e o ORM utilizado foi o SQLAlchemy.
 
 ## 🔗 Tecnologias utilizadas
 
