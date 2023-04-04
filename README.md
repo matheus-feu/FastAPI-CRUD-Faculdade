@@ -63,7 +63,7 @@ Atente-se aos passos a seguir para executar o projeto:
 git clone https://github.com/matheus-feu/FastAPI-JWT-Security.git
 
 # Entrar no diretório
-cd FastAPI-JWT-Security
+cd FastAPI-CRUD-Faculdade 
 ```
 
 #### 🐳 Docker
